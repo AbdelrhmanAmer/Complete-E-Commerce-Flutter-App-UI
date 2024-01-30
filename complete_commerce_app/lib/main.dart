@@ -1,4 +1,5 @@
 import 'package:complete_commerce_app/constants.dart';
+import 'package:complete_commerce_app/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Muli",
         useMaterial3: true,
       ),
-      home: Scaffold(appBar: AppBar(), body: Container(),),
+      home: const SplashScreen()
     );
   }
 }
