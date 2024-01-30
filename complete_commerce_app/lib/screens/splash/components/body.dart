@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'splash_content.dart';
-import 'default_button.dart';
+import '../../../components/default_button.dart';
 import '../../../constants.dart';
 
 class Body extends StatefulWidget {
