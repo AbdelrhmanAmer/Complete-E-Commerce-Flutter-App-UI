@@ -1,7 +1,8 @@
-import 'package:complete_commerce_app/constants.dart';
-import 'package:complete_commerce_app/screens/splash/components/splash_content.dart';
-import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
+
+import 'splash_content.dart';
+import 'default_button.dart';
+import '../../../constants.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -11,13 +12,15 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
       "text": "Welcome to Tokoto, Let's shop",
       "image": "assets/images/splash_1.png"
     },
     {
-      "text": "We help people conect with store \naround the different places in Egypt",
+      "text":
+          "We help people conect with store \naround the different places in Egypt",
       "image": "assets/images/splash_2.png"
     },
     {
@@ -36,19 +39,53 @@ class _BodyState extends State<Body> {
               flex: 3,
               child: PageView.builder(
                 itemCount: splashData.length,
-                itemBuilder: (ctx, index) =>  SplashContent(
+                itemBuilder: (ctx, index) => SplashContent(
                   text: splashData[index]["text"]!,
                   image: splashData[index]["image"]!,
                 ),
+                onPageChanged: (current) {
+                  setState(() {
+                    currentPage = current;
+                  });
+                },
               ),
             ),
+            const SizedBox(height: kDefaultPadding * 2),
             Expanded(
               flex: 2,
-              child: SizedBox(),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        splashData.length,
+                        (index) => bulidDot(index: index),
+                      ),
+                    ),
+                    DefaultButton(text: 'Continue', press: (){},)
+                  ],
+                ),
+              ),
             ),
           ],
         ),
       ),
     );
   }
+
+  AnimatedContainer bulidDot({index}) {
+    return AnimatedContainer(
+      margin: const EdgeInsets.only(right: kDefaultPadding / 4),
+      height: 6,
+      width: currentPage == index ? 20 : 6,
+      decoration: BoxDecoration(
+          color:
+              currentPage == index ? kPrimaryColor : kTextColor.withOpacity(.5),
+          borderRadius: BorderRadius.circular(5)),
+      duration: kAnimationDuration,
+    );
+  }
 }
+
