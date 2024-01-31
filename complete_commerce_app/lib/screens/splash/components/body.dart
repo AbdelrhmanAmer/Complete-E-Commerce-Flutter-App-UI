@@ -55,23 +55,26 @@ class _BodyState extends State<Body> {
             Expanded(
               flex: 2,
               child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        splashData.length,
-                        (index) => bulidDot(index: index),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          splashData.length,
+                          (index) => bulidDot(index: index),
+                        ),
                       ),
-                    ),
-                    DefaultButton(
-                      text: 'Continue',
-                      press: () {
-                        Navigator.pushNamed(context, SignInScreen.routeName);
-                      },
-                    )
-                  ],
+                      DefaultButton(
+                        text: 'Continue',
+                        press: () {
+                          Navigator.pushNamed(context, SignInScreen.routeName);
+                        },
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

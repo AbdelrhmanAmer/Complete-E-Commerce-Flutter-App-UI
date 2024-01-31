@@ -28,6 +28,7 @@ InputDecorationTheme inputDecorationTheme() {
     floatingLabelBehavior: FloatingLabelBehavior.always,
     enabledBorder: outlineInputBorder,
     focusedBorder: outlineInputBorder,
+    border: outlineInputBorder
   );
 }
 

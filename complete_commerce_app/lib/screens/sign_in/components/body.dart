@@ -1,7 +1,9 @@
-import 'package:complete_commerce_app/constants.dart';
-import 'package:complete_commerce_app/size_config.dart';
+import 'package:complete_commerce_app/components/default_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
+import '../../../constants.dart';
+import '../../../size_config.dart';
+import 'custom_suffix_icon.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -20,8 +22,8 @@ class Body extends StatelessWidget {
               Text(
                 "Welcome Back",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: getProportionateScreenHeight(30),
+                  fontWeight: FontWeight.w800,
+                  fontSize: getProportionateScreenHeight(35),
                   color: Colors.black,
                 ),
               ),
@@ -31,8 +33,9 @@ class Body extends StatelessWidget {
                 style: TextStyle(),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: kDefaultPadding),
-              SignInForm(),
+              SizedBox(
+                  height: getProportionateScreenHeight(kDefaultPadding * 2)),
+              const SignInForm(),
             ],
           ),
         ),
@@ -49,19 +52,41 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
-
-
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Column(children: [
-        TextFormField(
-          decoration: InputDecoration(
-            label: Text("Email"),
-            hintText: "Enter you email"
-          )
-        )
-      ]),
+      child: Column(
+        children: [
+          buildEmailField(),
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding * 2)),
+          buildPasswordField(),
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding * 2)),
+          DefaultButton(text: "Continue", press: (){})
+        ],
+      ),
+    );
+  }
+
+  TextFormField buildPasswordField() {
+    return TextFormField(
+      obscureText: true,
+      decoration: const InputDecoration(
+        label: Text("Password"),
+        hintText: "Enter your password",
+        suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+      ),
+      keyboardType: TextInputType.text,
+    );
+  }
+
+  TextFormField buildEmailField() {
+    return TextFormField(
+      decoration: const InputDecoration(
+        label: Text("Email"),
+        hintText: "Enter you email",
+        suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Mail.svg"),
+      ),
+      keyboardType: TextInputType.emailAddress,
     );
   }
 }
