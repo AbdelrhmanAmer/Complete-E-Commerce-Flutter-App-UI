@@ -1,3 +1,4 @@
+import 'package:complete_commerce_app/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'splash_content.dart';
@@ -64,7 +65,12 @@ class _BodyState extends State<Body> {
                         (index) => bulidDot(index: index),
                       ),
                     ),
-                    DefaultButton(text: 'Continue', press: (){},)
+                    DefaultButton(
+                      text: 'Continue',
+                      press: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
+                    )
                   ],
                 ),
               ),
@@ -88,4 +94,3 @@ class _BodyState extends State<Body> {
     );
   }
 }
-
