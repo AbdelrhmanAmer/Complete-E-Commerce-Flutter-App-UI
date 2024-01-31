@@ -4,14 +4,30 @@ import 'constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.deepPurple,
-      background: Colors.white,
-    ),
-    fontFamily: "Muli",
-    appBarTheme: appBarTheme(),
-    textTheme: textTheme(),
-    useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.deepPurple,
+        background: Colors.white,
+      ),
+      inputDecorationTheme: inputDecorationTheme(),
+      fontFamily: "Muli",
+      appBarTheme: appBarTheme(),
+      textTheme: textTheme(),
+      useMaterial3: true,
+      visualDensity: VisualDensity.adaptivePlatformDensity);
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  final outlineInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(28),
+    borderSide: const BorderSide(color: kTextColor),
+    gapPadding: 10,
+  );
+  return InputDecorationTheme(
+    contentPadding:
+        const EdgeInsets.symmetric(horizontal: 42, vertical: kDefaultPadding),
+    floatingLabelBehavior: FloatingLabelBehavior.always,
+    enabledBorder: outlineInputBorder,
+    focusedBorder: outlineInputBorder,
   );
 }
 

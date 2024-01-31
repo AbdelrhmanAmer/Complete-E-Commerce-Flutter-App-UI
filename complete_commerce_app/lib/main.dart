@@ -1,4 +1,3 @@
-import 'package:complete_commerce_app/constants.dart';
 import 'package:complete_commerce_app/routes.dart';
 import 'package:complete_commerce_app/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
