@@ -52,16 +52,26 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final Map<String, String> _authData = {"email": "", "password": ""};
+
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Column(
         children: [
           buildEmailField(),
           SizedBox(height: getProportionateScreenHeight(kDefaultPadding * 2)),
           buildPasswordField(),
           SizedBox(height: getProportionateScreenHeight(kDefaultPadding * 2)),
-          DefaultButton(text: "Continue", press: (){})
+          DefaultButton(
+              text: "Continue",
+              press: () {
+                if (_formKey.currentState!.validate()) {
+                  _formKey.currentState!.save();
+                }
+              })
         ],
       ),
     );
@@ -69,6 +79,16 @@ class _SignInFormState extends State<SignInForm> {
 
   TextFormField buildPasswordField() {
     return TextFormField(
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      validator: (value) {
+        if (value!.isEmpty) {
+          return kEmailNullError;
+        } else if (value.length < 8) {
+          return kShortPassError;
+        }
+        return null;
+      },
+      onSaved: (newValue) => _authData['password'] = newValue!,
       obscureText: true,
       decoration: const InputDecoration(
         label: Text("Password"),
@@ -81,6 +101,16 @@ class _SignInFormState extends State<SignInForm> {
 
   TextFormField buildEmailField() {
     return TextFormField(
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      validator: (value) {
+        if (value!.isEmpty) {
+          return kEmailNullError;
+        } else if (!emailValidatorRegExp.hasMatch(value)) {
+          return kInvalidEmailError;
+        }
+        return null;
+      },
+      onSaved: (newValue) => _authData['email'] = newValue!,
       decoration: const InputDecoration(
         label: Text("Email"),
         hintText: "Enter you email",
