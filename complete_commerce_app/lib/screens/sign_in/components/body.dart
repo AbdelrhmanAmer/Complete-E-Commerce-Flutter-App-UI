@@ -1,3 +1,4 @@
+import 'package:complete_commerce_app/components/no_account_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -55,26 +56,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have an account? ",
-                      style: TextStyle(
-                        fontSize: getProportionateScreenWidth(16),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Sign Up",
-                        style: TextStyle(
-                            fontSize: getProportionateScreenWidth(16),
-                            color: kPrimaryColor),
-                      ),
-                    ),
-                  ],
-                ),
+                const NoAccountText(),
                 SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
               ],
             ),
