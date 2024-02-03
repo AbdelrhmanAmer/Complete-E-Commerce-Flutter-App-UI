@@ -34,7 +34,7 @@ class Body extends StatelessWidget {
                   style: TextStyle(),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: SizeConfig.screenHeight * 0.08),
+                SizedBox(height: SizeConfig.screenHeight * 0.07),
                 const SignInForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 Row(
@@ -64,14 +64,18 @@ class Body extends StatelessWidget {
                         fontSize: getProportionateScreenWidth(16),
                       ),
                     ),
-                    Text(
-                      "Sign Up",
-                      style: TextStyle(
-                          fontSize: getProportionateScreenWidth(16),
-                          color: kPrimaryColor),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Sign Up",
+                        style: TextStyle(
+                            fontSize: getProportionateScreenWidth(16),
+                            color: kPrimaryColor),
+                      ),
                     ),
                   ],
-                )
+                ),
+                SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
               ],
             ),
           ),

@@ -1,3 +1,4 @@
+import 'package:complete_commerce_app/screens/forgot_password%20/forgot_password_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/default_button.dart';
@@ -50,7 +51,9 @@ class _SignInFormState extends State<SignInForm> {
 
   TextButton buildForgotPasswordButton() {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context ,ForgotPasswordScreen.routeName);
+      },
       style: TextButton.styleFrom(
         textStyle: const TextStyle(decoration: TextDecoration.underline),
       ),

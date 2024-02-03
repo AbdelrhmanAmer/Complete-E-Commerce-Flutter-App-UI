@@ -4,10 +4,6 @@ import 'constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.deepPurple,
-        background: Colors.white,
-      ),
       inputDecorationTheme: inputDecorationTheme(),
       fontFamily: "Muli",
       appBarTheme: appBarTheme(),
