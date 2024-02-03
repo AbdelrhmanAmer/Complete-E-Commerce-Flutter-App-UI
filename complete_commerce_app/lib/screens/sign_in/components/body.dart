@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -20,7 +19,7 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(height: kDefaultPadding),
+                SizedBox(height: SizeConfig.screenHeight * .04),
                 Text(
                   "Welcome Back",
                   style: TextStyle(
@@ -29,16 +28,15 @@ class Body extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                const SizedBox(height: kDefaultPadding / 2),
+                SizedBox(height: SizeConfig.screenHeight * .01),
                 const Text(
                   "Sign in with your email and password\nor continue with social media",
                   style: TextStyle(),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
-                    height: getProportionateScreenHeight(kDefaultPadding * 2)),
+                SizedBox(height: SizeConfig.screenHeight * 0.08),
                 const SignInForm(),
-                const SizedBox(height: kDefaultPadding * 2),
+                SizedBox(height: SizeConfig.screenHeight * 0.08),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -53,6 +51,24 @@ class Body extends StatelessWidget {
                     SocialCard(
                       icon: 'assets/icons/facebook-2.svg',
                       press: () {},
+                    ),
+                  ],
+                ),
+                SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Don't have an account? ",
+                      style: TextStyle(
+                        fontSize: getProportionateScreenWidth(16),
+                      ),
+                    ),
+                    Text(
+                      "Sign Up",
+                      style: TextStyle(
+                          fontSize: getProportionateScreenWidth(16),
+                          color: kPrimaryColor),
                     ),
                   ],
                 )
