@@ -1,4 +1,5 @@
 import 'package:complete_commerce_app/screens/forgot_password%20/forgot_password_screen.dart';
+import 'package:complete_commerce_app/screens/login_success/login_success_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/default_button.dart';
@@ -42,6 +43,7 @@ class _SignInFormState extends State<SignInForm> {
               press: () {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
+                  Navigator.pushReplacementNamed(context, LoginSuccessScreen.routeName);
                 }
               })
         ],
