@@ -1,3 +1,4 @@
+import 'package:complete_commerce_app/screens/sign_up/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -20,7 +21,8 @@ class NoAccountText extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () =>
+              Navigator.pushNamed(context, SignUpScreen.routeName),
           child: Text(
             "Sign Up",
             style: TextStyle(
@@ -32,4 +34,3 @@ class NoAccountText extends StatelessWidget {
     );
   }
 }
-
