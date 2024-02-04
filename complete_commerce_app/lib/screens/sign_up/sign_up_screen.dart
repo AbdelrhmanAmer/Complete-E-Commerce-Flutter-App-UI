@@ -14,7 +14,7 @@ class SignUpScreen extends StatelessWidget {
           title: const Text("Sign Up"),
           centerTitle: true,
         ),
-        body: const Body(),
+        body: Body(),
       ),
     );
   }
