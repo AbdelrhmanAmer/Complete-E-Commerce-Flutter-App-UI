@@ -1,4 +1,5 @@
 import 'package:complete_commerce_app/components/default_button.dart';
+import 'package:complete_commerce_app/components/page_title_and_subtitle.dart';
 import 'package:complete_commerce_app/constants.dart';
 import 'package:complete_commerce_app/components/custom_suffix_icon.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,8 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
     String email;
+    final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -23,23 +24,13 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: SizeConfig.screenHeight * .04),
-              Text(
-                "Forgot Password",
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: getProportionateScreenHeight(35),
-                  color: Colors.black,
-                ),
-              ),
-              SizedBox(height: SizeConfig.screenHeight * .01),
-              const Text(
-                "Please Enter your email and we will send\nyou a link to return your account",
-                style: TextStyle(),
-                textAlign: TextAlign.center,
-              ),
+              const PageTitleAndSubtitle(
+                  title: "Forgot Password",
+                  subtitle:
+                      "Please Enter your email and we will send\nyou a link to return your account"),
               SizedBox(height: SizeConfig.screenHeight * .2),
               Form(
-                key: _formKey,
+                key: formKey,
                 child: Column(
                   children: [
                     TextFormField(
@@ -67,11 +58,13 @@ class Body extends StatelessWidget {
                 ),
               ),
               SizedBox(height: SizeConfig.screenHeight * .15),
-              DefaultButton(text: "Continue", press: () {
-                if(_formKey.currentState!.validate()){
-                  _formKey.currentState!.save();
-                }
-              }),
+              DefaultButton(
+                  text: "Continue",
+                  press: () {
+                    if (formKey.currentState!.validate()) {
+                      formKey.currentState!.save();
+                    }
+                  }),
               SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
               const NoAccountText(),
               SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),

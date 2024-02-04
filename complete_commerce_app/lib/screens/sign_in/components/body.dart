@@ -1,6 +1,7 @@
 import 'package:complete_commerce_app/components/no_account_text.dart';
 import 'package:flutter/material.dart';
 
+import '../../../components/page_title_and_subtitle.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
@@ -21,20 +22,10 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * .04),
-                Text(
-                  "Welcome Back",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontSize: getProportionateScreenHeight(35),
-                    color: Colors.black,
-                  ),
-                ),
-                SizedBox(height: SizeConfig.screenHeight * .01),
-                const Text(
-                  "Sign in with your email and password\nor continue with social media",
-                  style: TextStyle(),
-                  textAlign: TextAlign.center,
-                ),
+                const PageTitleAndSubtitle(
+                    title: "Sign In",
+                    subtitle:
+                        "Sign in with your email and password\nor continue with social media"),
                 SizedBox(height: SizeConfig.screenHeight * 0.07),
                 const SignInForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
