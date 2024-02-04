@@ -1,3 +1,4 @@
+import 'package:complete_commerce_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:complete_commerce_app/screens/sign_up/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,4 +13,5 @@ final Map<String, WidgetBuilder> routes = {
   ForgotPasswordScreen.routeName: (context) => const ForgotPasswordScreen(),
   LoginSuccessScreen.routeName: (context) => const LoginSuccessScreen(),
   SignUpScreen.routeName: (context) => const SignUpScreen(),
+  CompleteProfileScreen.routeName: (context) => const CompleteProfileScreen(),
 };

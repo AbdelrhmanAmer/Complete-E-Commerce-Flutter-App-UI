@@ -1,3 +1,4 @@
+import 'package:complete_commerce_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/custom_suffix_icon.dart';
@@ -29,6 +30,7 @@ class SignUpForm extends StatelessWidget {
                 press: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
+                    Navigator.pushNamed(context, CompleteProfileScreen.routeName);
                   }
                 }),
           ],
