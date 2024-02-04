@@ -22,7 +22,7 @@ class SplashContent extends StatelessWidget {
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
             color: kPrimaryColor,
-            fontWeight: FontWeight.w800,
+            fontWeight: FontWeight.w900,
           ),
         ),
         const SizedBox(height: kDefaultPadding / 2),

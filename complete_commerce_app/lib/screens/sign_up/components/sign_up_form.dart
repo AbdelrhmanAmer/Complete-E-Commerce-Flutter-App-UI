@@ -5,6 +5,7 @@ import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
+// ignore: must_be_immutable
 class SignUpForm extends StatelessWidget {
   String email = "", password = "", confirmPassword = "";
   final _formKey = GlobalKey<FormState>();
