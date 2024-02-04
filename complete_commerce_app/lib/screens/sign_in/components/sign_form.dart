@@ -94,7 +94,7 @@ class _SignInFormState extends State<SignInForm> {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (value) {
         if (value!.isEmpty) {
-          return kEmailNullError;
+          return kPassNullError;
         } else if (value.length < 8) {
           return kShortPassError;
         }

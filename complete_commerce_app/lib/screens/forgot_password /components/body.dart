@@ -12,7 +12,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String email;
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
     return Padding(
@@ -51,7 +50,6 @@ class Body extends StatelessWidget {
                         return null;
                       },
                       onSaved: (value) {
-                        email = value!;
                       },
                     ),
                   ],

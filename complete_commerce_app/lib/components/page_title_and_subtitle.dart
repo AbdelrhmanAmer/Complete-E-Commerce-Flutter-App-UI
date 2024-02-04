@@ -25,7 +25,6 @@ class PageTitleAndSubtitle extends StatelessWidget {
       SizedBox(height: SizeConfig.screenHeight * .01),
       Text(
         subtitle,
-        // "Sign in with your email and password\nor continue with social media",
         style: TextStyle(fontSize: getProportionateScreenWidth(14)),
         textAlign: TextAlign.center,
       )
