@@ -12,7 +12,7 @@ class CompleteProfileScreen extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: const Text("Complete Profile"),
+        title: const Text("Sign Up"),
         centerTitle: true,
       ),
       body: const Body(),

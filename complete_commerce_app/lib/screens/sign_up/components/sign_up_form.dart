@@ -39,6 +39,7 @@ class SignUpForm extends StatelessWidget {
 
   TextFormField buildEmailField() {
     return TextFormField(
+      initialValue: email == "" ? null : email,      
       decoration: const InputDecoration(
         label: Text("Email"),
         hintText: "Enter your email",
@@ -60,6 +61,7 @@ class SignUpForm extends StatelessWidget {
 
   TextFormField buildPasswordField() {
     return TextFormField(
+      initialValue: password == "" ? null : password,
       decoration: const InputDecoration(
         label: Text("Password"),
         hintText: "Enter your password",
@@ -83,6 +85,7 @@ class SignUpForm extends StatelessWidget {
 
   TextFormField buildConfirmPasswordField() {
     return TextFormField(
+      initialValue: confirmPassword == "" ? null : confirmPassword,
       decoration: const InputDecoration(
         label: Text("Confirm Password"),
         hintText: "Re-enter your password",
