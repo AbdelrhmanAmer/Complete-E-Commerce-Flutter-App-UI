@@ -1,6 +1,7 @@
 import 'package:complete_commerce_app/components/custom_suffix_icon.dart';
 import 'package:complete_commerce_app/components/default_button.dart';
 import 'package:complete_commerce_app/constants.dart';
+import 'package:complete_commerce_app/screens/OTP/otp_screen.dart';
 import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -92,6 +93,7 @@ class CompleteProfileFrom extends StatelessWidget {
             press: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
+                Navigator.pushNamed(context, OTPScreen.routeName);
               }
             }),
       ]),
