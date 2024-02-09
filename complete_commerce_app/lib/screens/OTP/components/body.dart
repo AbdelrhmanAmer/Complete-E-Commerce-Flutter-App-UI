@@ -1,9 +1,8 @@
-import 'package:complete_commerce_app/components/default_button.dart';
-import 'package:complete_commerce_app/components/page_title_and_subtitle.dart';
-import 'package:complete_commerce_app/constants.dart';
-import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
+import '../../../components/page_title_and_subtitle.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 import 'otp_form.dart';
 
 class Body extends StatelessWidget {

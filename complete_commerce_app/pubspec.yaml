@@ -33,6 +33,7 @@ flutter:
     - family: Muli
       fonts:
         - asset: assets/fonts/muli/Muli.ttf
+        
         - asset: assets/fonts/muli/Muli-Bold.ttf
         - weight: 700
 

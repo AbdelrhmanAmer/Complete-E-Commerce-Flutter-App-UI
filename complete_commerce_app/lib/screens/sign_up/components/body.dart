@@ -7,7 +7,7 @@ import '../../sign_in/components/social_card.dart';
 import 'sign_up_form.dart';
 
 class Body extends StatelessWidget {
-  Body({super.key});
+  const Body({super.key});
 
   @override
   Widget build(BuildContext context) {
