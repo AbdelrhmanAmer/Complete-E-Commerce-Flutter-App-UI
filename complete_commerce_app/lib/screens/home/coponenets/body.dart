@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../size_config.dart';
 import '../../../constants.dart';
@@ -39,16 +38,23 @@ class Body extends StatelessWidget {
                       disabledBorder: InputBorder.none,
                       hintText: "Search product",
                       contentPadding: EdgeInsets.symmetric(
-                          horizontal: getProportionateScreenWidth(kDefaultPadding),
-                          vertical: getProportionateScreenWidth(12)
-                      ),
+                          horizontal:
+                              getProportionateScreenWidth(kDefaultPadding),
+                          vertical: getProportionateScreenWidth(12)),
                       prefixIcon: const Icon(Icons.search),
                     ),
                   ),
                 ),
                 AppBarIconButton(
-                    icon: "assets/icons/Cart Icon.svg", press: () {}),
-                AppBarIconButton(icon: "assets/icons/Bell.svg", press: () {}),
+                  icon: "assets/icons/Cart Icon.svg",
+                  press: () {},
+                  numOfNotifications: 0,
+                ),
+                AppBarIconButton(
+                  icon: "assets/icons/Bell.svg",
+                  press: () {},
+                  numOfNotifications: 3,
+                ),
               ],
             )
           ],
