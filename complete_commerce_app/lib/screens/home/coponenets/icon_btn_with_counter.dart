@@ -4,8 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-class AppBarIconButton extends StatelessWidget {
-  const AppBarIconButton({
+class IconBtnWithCounter extends StatelessWidget {
+  const IconBtnWithCounter({
     super.key,
     required this.icon,
     required this.press,
