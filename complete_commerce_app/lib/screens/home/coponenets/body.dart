@@ -1,7 +1,8 @@
-import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
+import '../../../size_config.dart';
 import '../../../constants.dart';
+import 'categories.dart';
 import 'discount_banner.dart';
 import 'home_header.dart';
 
@@ -22,11 +23,12 @@ class Body extends StatelessWidget {
             const HomeHeader(),
             SizedBox(height: getProportionateScreenHeight(30)),
             const DiscountBanner(),
-            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-            
+            SizedBox(height: getProportionateScreenHeight(30)),
+            const Categories(),
           ],
         ),
       ),
     );
   }
 }
+

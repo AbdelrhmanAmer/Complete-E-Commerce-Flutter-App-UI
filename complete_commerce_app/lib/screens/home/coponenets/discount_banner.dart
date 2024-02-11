@@ -23,7 +23,7 @@ class DiscountBanner extends StatelessWidget {
               const Color(0xFF4A3298).withOpacity(.8),
               const Color(0xFF4A3298),
             ]),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(20),
           ),
           child: RichText(
             text: TextSpan(
@@ -42,7 +42,7 @@ class DiscountBanner extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: -20,
+          right: -30,
           top: -75,
           child: Container(
             height: getProportionateScreenHeight(150),
