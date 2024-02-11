@@ -9,11 +9,11 @@ class IconBtnWithCounter extends StatelessWidget {
     super.key,
     required this.icon,
     required this.press,
-    required this.numOfNotifications,
+    required this.numOfItems,
   });
   final String icon;
   final VoidCallback press;
-  final int numOfNotifications;
+  final int numOfItems;
 
   @override
   Widget build(BuildContext context) {
@@ -31,28 +31,29 @@ class IconBtnWithCounter extends StatelessWidget {
                 color: kSecondaryColor.withOpacity(.1), shape: BoxShape.circle),
             child: SvgPicture.asset(icon),
           ),
-          numOfNotifications == 0 ? Container() : Positioned(
-            right: 0,
-            top: -4,
-            child: Container(
-              alignment: Alignment.center,
-              height: 16,
-              width: 16,
-              decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white, width: 1.5)),
-              child: Center(
-                  child: Text(
-                "$numOfNotifications",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: getProportionateScreenHeight(11),
-                    height: 1,
-                    fontWeight: FontWeight.bold),
-              )),
-            ),
-          )
+          if (numOfItems != 0)
+            Positioned(
+              right: 0,
+              top: -4,
+              child: Container(
+                alignment: Alignment.center,
+                height: 16,
+                width: 16,
+                decoration: BoxDecoration(
+                    color: kPrimaryColor,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white, width: 1.5)),
+                child: Center(
+                    child: Text(
+                  "$numOfItems",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: getProportionateScreenHeight(11),
+                      height: 1,
+                      fontWeight: FontWeight.bold),
+                )),
+              ),
+            )
         ],
       ),
     );

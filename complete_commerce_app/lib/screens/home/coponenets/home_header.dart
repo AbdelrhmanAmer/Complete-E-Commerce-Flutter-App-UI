@@ -21,12 +21,12 @@ class HomeHeader extends StatelessWidget {
         IconBtnWithCounter(
           icon: "assets/icons/Cart Icon.svg",
           press: () {},
-          numOfNotifications: 0,
+          numOfItems: 0,
         ),
         IconBtnWithCounter(
           icon: "assets/icons/Bell.svg",
           press: () {},
-          numOfNotifications: 3,
+          numOfItems: 3,
         ),
       ],
     );

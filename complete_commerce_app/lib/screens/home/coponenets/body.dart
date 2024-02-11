@@ -1,6 +1,8 @@
+import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
+import 'discount_banner.dart';
 import 'home_header.dart';
 
 class Body extends StatelessWidget {
@@ -8,8 +10,8 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
+    return Padding(
+      padding: const EdgeInsets.only(
         right: kDefaultPadding,
         left: kDefaultPadding,
         top: kDefaultPadding,
@@ -17,11 +19,14 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            HomeHeader()
+            const HomeHeader(),
+            SizedBox(height: getProportionateScreenHeight(30)),
+            const DiscountBanner(),
+            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+            
           ],
         ),
       ),
     );
   }
 }
-
