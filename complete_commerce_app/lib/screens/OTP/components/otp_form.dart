@@ -1,3 +1,4 @@
+import 'package:complete_commerce_app/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/default_button.dart';
@@ -102,7 +103,9 @@ class _OTPFormState extends State<OTPForm> {
             ],
           ),
           SizedBox(height: SizeConfig.screenHeight * .2),
-          DefaultButton(text: "Continue", press: (){})
+          DefaultButton(text: "Continue", press: (){
+            Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+          })
         ],
       ),
     );

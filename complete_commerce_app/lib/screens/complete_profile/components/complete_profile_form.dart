@@ -63,8 +63,6 @@ class CompleteProfileFrom extends StatelessWidget {
           validator: (value) {
             if (value!.isEmpty) {
               return kPhoneNumberNullError;
-            } else if (value.length != 11) {
-              return kShortPhoneNumberError;
             }
             return null;
           },
