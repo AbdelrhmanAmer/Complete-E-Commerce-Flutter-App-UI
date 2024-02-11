@@ -1,9 +1,10 @@
-import 'package:complete_commerce_app/components/custom_suffix_icon.dart';
-import 'package:complete_commerce_app/components/default_button.dart';
-import 'package:complete_commerce_app/constants.dart';
-import 'package:complete_commerce_app/screens/OTP/otp_screen.dart';
-import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
+
+import '../../../components/custom_suffix_icon.dart';
+import '../../../components/default_button.dart';
+import '../../otp/otp_screen.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 
 // ignore: must_be_immutable
 class CompleteProfileFrom extends StatelessWidget {

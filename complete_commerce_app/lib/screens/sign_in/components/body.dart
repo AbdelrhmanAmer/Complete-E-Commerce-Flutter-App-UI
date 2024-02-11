@@ -1,6 +1,6 @@
-import 'package:complete_commerce_app/components/no_account_text.dart';
 import 'package:flutter/material.dart';
 
+import '../../../components/no_account_text.dart';
 import '../../../components/page_title_and_subtitle.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';

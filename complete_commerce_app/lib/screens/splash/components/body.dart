@@ -1,6 +1,6 @@
-import 'package:complete_commerce_app/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../sign_in/sign_in_screen.dart';
 import 'splash_content.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';

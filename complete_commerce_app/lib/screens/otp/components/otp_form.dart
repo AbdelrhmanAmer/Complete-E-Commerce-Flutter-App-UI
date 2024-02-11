@@ -1,6 +1,6 @@
-import 'package:complete_commerce_app/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../home/home_screen.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';

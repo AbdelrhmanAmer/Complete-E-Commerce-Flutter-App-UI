@@ -1,7 +1,7 @@
-import 'package:complete_commerce_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../constants.dart';
 
 class SocialCard extends StatelessWidget {
   const SocialCard({

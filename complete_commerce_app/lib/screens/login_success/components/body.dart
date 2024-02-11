@@ -1,6 +1,6 @@
-import 'package:complete_commerce_app/components/default_button.dart';
 import 'package:flutter/material.dart';
 
+import '../../../components/default_button.dart';
 import '../../../size_config.dart';
 
 class Body extends StatelessWidget {

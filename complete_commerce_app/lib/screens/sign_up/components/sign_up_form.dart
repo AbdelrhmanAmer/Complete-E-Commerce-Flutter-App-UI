@@ -1,6 +1,6 @@
-import 'package:complete_commerce_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../complete_profile/complete_profile_screen.dart';
 import '../../../components/custom_suffix_icon.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';

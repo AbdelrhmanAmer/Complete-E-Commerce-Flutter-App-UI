@@ -1,7 +1,7 @@
-import 'package:complete_commerce_app/constants.dart';
-import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
+import '../../../size_config.dart';
 import '../../../components/page_title_and_subtitle.dart';
 import 'complete_profile_form.dart';
 
