@@ -5,6 +5,7 @@ import '../../../constants.dart';
 import 'categories.dart';
 import 'discount_banner.dart';
 import 'home_header.dart';
+import 'section_title.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -25,10 +26,14 @@ class Body extends StatelessWidget {
             const DiscountBanner(),
             SizedBox(height: getProportionateScreenHeight(30)),
             const Categories(),
+            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+            SectionTitle(title: "Special for you", press: (){}),
+
           ],
         ),
       ),
     );
   }
 }
+
 
