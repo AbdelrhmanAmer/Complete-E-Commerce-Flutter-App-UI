@@ -36,7 +36,7 @@ List<Product> demoProducts = [
       const Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Wireless Controller for PS4™",
+    title: "11111111111111111111Wireless Controller for PS4™",
     price: 64.99,
     description: "Experience the ultimate gaming with our Wireless Controller for PS4™. Ergonomically designed for comfort and precision gaming. It's a must-have for every gaming enthusiast.",
     rating: 4.8,
