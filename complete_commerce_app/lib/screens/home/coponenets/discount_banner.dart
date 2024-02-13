@@ -34,7 +34,7 @@ class DiscountBanner extends StatelessWidget {
                   text: "Cashback 20%",
                   style: TextStyle(
                     fontSize: getProportionateScreenWidth(24),
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   ),
                 )
               ],
@@ -48,7 +48,7 @@ class DiscountBanner extends StatelessWidget {
             height: getProportionateScreenHeight(150),
             width: getProportionateScreenWidth(150),
             decoration: BoxDecoration(
-                color: kSecondaryColor.withOpacity(.1),
+                color: kSecondaryColor.withOpacity(.2),
                 borderRadius: BorderRadius.circular(150)),
           ),
         ),
@@ -59,7 +59,7 @@ class DiscountBanner extends StatelessWidget {
             height: getProportionateScreenHeight(150),
             width: getProportionateScreenWidth(150),
             decoration: BoxDecoration(
-                color: kSecondaryColor.withOpacity(.1),
+                color: kSecondaryColor.withOpacity(.2),
                 borderRadius: BorderRadius.circular(150)),
           ),
         ),
