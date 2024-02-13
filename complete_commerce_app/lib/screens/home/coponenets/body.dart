@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
 import '../../../constants.dart';
+import 'special_offer_card.dart';
 import 'categories.dart';
 import 'discount_banner.dart';
 import 'home_header.dart';
@@ -27,13 +28,18 @@ class Body extends StatelessWidget {
             SizedBox(height: getProportionateScreenHeight(30)),
             const Categories(),
             SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-            SectionTitle(title: "Special for you", press: (){}),
-
+            SectionTitle(title: "Special for you", press: () {}),
+            SizedBox(height: getProportionateScreenHeight(30)),
+            SpecialOfferCard(
+              title: "Smartphone",
+              subtitle: "18 Brands",
+              image: "assets/images/Image Banner 2.png",
+              press: () {},
+            )
           ],
         ),
       ),
     );
   }
 }
-
 
