@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../models/product.dart';
 import '../../../size_config.dart';
 import '../../../constants.dart';
-import 'product_section/product_card.dart';
+import 'products/product_card.dart';
 import 'section_title.dart';
-import 'categories.dart';
+import 'categories/categories.dart';
 import 'discount_banner.dart';
-import 'home_header.dart';
-import 'special_offers.dart';
+import 'header/home_header.dart';
+import 'categories/special_offers.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});

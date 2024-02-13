@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
-import '../../../size_config.dart';
-import 'section_title.dart';
+import '../../../../constants.dart';
+import '../../../../size_config.dart';
+import '../section_title.dart';
 import 'special_offer_card.dart';
 
 class SpecialOffers extends StatelessWidget {
