@@ -34,7 +34,7 @@ class IconBtnWithCounter extends StatelessWidget {
           if (numOfItems != 0)
             Positioned(
               right: 0,
-              top: -4,
+              top: -2,
               child: Container(
                 alignment: Alignment.center,
                 height: 16,

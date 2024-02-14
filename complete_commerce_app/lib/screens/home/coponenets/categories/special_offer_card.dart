@@ -18,7 +18,7 @@ class SpecialOfferCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: kDefaultPadding / 2),
+      padding: const EdgeInsets.only(left: kDefaultPadding/2),
       child: GestureDetector(
         onTap: () {},
         child: Stack(

@@ -13,27 +13,21 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        right: kDefaultPadding,
-        left: kDefaultPadding,
-        top: kDefaultPadding,
-      ),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            const HomeHeader(),
-            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-            const DiscountBanner(),
-            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-            const Categories(),
-            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-            const SpecialOffers(),
-            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-            const PopularProducts(),
-            SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-          ],
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+          const HomeHeader(),
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+          const DiscountBanner(),
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+          const Categories(),
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+          const SpecialOffers(),
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+          const PopularProducts(),
+          SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+        ],
       ),
     );
   }

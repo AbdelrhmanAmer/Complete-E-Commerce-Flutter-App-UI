@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../constants.dart';
 import 'category_card.dart';
 
 class Categories extends StatelessWidget {
@@ -13,16 +14,19 @@ class Categories extends StatelessWidget {
       {"icon": "assets/icons/Gift Icon.svg", "text": "Daily Gift"},
       {"icon": "assets/icons/Discover.svg", "text": "More"},
     ];
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
-        children: List.generate(
-      categories.length,
-      (index) => CategoryCard(
-        icon: categories[index]["icon"],
-        text: categories[index]["text"],
-        press: () {},
-      ),
-    ));
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+          children: List.generate(
+        categories.length,
+        (index) => CategoryCard(
+          icon: categories[index]["icon"],
+          text: categories[index]["text"],
+          press: () {},
+        ),
+      )),
+    );
   }
 }

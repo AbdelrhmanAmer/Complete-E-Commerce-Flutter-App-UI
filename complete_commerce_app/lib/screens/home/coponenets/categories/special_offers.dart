@@ -18,23 +18,26 @@ class SpecialOffers extends StatelessWidget {
         SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SpecialOfferCard(
-                title: "Smartphone",
-                numOfBrands: 18,
-                image: "assets/images/Image Banner 2.png",
-                press: () {},
-              ),
-              SpecialOfferCard(
-                title: "Fashion",
-                numOfBrands: 24,
-                image: "assets/images/Image Banner 3.png",
-                press: () {},
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding/2),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SpecialOfferCard(
+                  title: "Smartphone",
+                  numOfBrands: 18,
+                  image: "assets/images/Image Banner 2.png",
+                  press: () {},
+                ),
+                SpecialOfferCard(
+                  title: "Fashion",
+                  numOfBrands: 24,
+                  image: "assets/images/Image Banner 3.png",
+                  press: () {},
+                ),
+              ],
+            ),
           ),
         )
       ],

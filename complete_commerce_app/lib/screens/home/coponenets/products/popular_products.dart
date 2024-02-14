@@ -19,12 +19,15 @@ class PopularProducts extends StatelessWidget {
         SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(
-              demoProducts.length,
-              (index) => ProductCard(
-                  product: demoProducts[index], press: () {}),
+          child: Padding(
+            padding: const EdgeInsets.only(left: kDefaultPadding),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: List.generate(
+                demoProducts.length,
+                (index) => ProductCard(
+                    product: demoProducts[index], press: () {}),
+              ),
             ),
           ),
         ),
