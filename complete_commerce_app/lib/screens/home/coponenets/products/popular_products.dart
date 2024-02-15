@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../details/details_screen.dart';
 import '../../../../constants.dart';
 import '../../../../models/product.dart';
 import '../../../../size_config.dart';
@@ -26,7 +27,15 @@ class PopularProducts extends StatelessWidget {
               children: List.generate(
                 demoProducts.length,
                 (index) => ProductCard(
-                    product: demoProducts[index], press: () {}),
+                    product: demoProducts[index],
+                    press: () {
+                      Navigator.pushNamed(
+                        context,
+                        DetailsScreen.routeName,
+                        arguments: ProductDetailsArguments(
+                            product: demoProducts[index]),
+                      );
+                    }),
               ),
             ),
           ),

@@ -1,6 +1,6 @@
-import 'package:complete_commerce_app/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class SectionTitle extends StatelessWidget {
