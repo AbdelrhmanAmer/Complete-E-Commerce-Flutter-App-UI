@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 import '../../models/product.dart';
 import 'components/body.dart';
+import 'components/rating_box.dart';
 import 'components/rounded_icon_btn.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -18,9 +19,17 @@ class DetailsScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.only(left: kDefaultPadding, top: kDefaultPadding),
+            padding: const EdgeInsets.only(
+                left: kDefaultPadding, top: kDefaultPadding),
             child: RoundedIconBtn(iconData: Icons.arrow_back, press: () {}),
           ),
+          actions: const [
+            Padding(
+              padding:
+                  EdgeInsets.only(right: kDefaultPadding, top: kDefaultPadding),
+              child: RatingBox(rating: 4.6, icon: "assets/icons/Star Icon.svg"),
+            )
+          ],
         ),
         body: const Body(),
       ),
