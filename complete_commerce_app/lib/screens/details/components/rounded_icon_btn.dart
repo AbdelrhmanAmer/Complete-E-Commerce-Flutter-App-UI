@@ -11,15 +11,15 @@ class RoundedIconBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () => Navigator.pop(context),
-      borderRadius: BorderRadius.circular(50),
       child: Container(
+        padding: const EdgeInsets.all(3),
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
         ),
-        child: Icon(iconData),
+        child: Center(child: Icon(iconData, size: 18)),
       ),
     );
   }

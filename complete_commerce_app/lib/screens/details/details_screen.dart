@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
 import '../../models/product.dart';
+import 'components/appbar_content.dart';
 import 'components/body.dart';
-import 'components/rating_box.dart';
-import 'components/rounded_icon_btn.dart';
 
 class DetailsScreen extends StatelessWidget {
   static String routeName = "/details";
@@ -13,28 +11,28 @@ class DetailsScreen extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    final ProductDetailsArguments arguments =
+        ModalRoute.of(context)!.settings.arguments as ProductDetailsArguments;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color(0xFFF5F6F9),
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          leading: Padding(
-            padding: const EdgeInsets.only(
-                left: kDefaultPadding, top: kDefaultPadding),
-            child: RoundedIconBtn(iconData: Icons.arrow_back, press: () {}),
-          ),
-          actions: const [
-            Padding(
-              padding:
-                  EdgeInsets.only(right: kDefaultPadding, top: kDefaultPadding),
-              child: RatingBox(rating: 4.6, icon: "assets/icons/Star Icon.svg"),
-            )
-          ],
+        appBar: CustomAppBar(
+          preferredSize: Size.fromHeight(AppBar().preferredSize.height),
+          child: AppBarContent(rating: arguments.product.rating),
         ),
         body: const Body(),
       ),
     );
   }
+}
+
+class CustomAppBar extends PreferredSize {
+  const CustomAppBar({
+    super.key,
+    required super.preferredSize,
+    required super.child,
+  });
 }
 
 class ProductDetailsArguments {
