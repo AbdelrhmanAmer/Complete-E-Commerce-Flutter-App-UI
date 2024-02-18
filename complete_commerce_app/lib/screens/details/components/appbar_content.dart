@@ -4,6 +4,14 @@ import '../../../constants.dart';
 import 'rating_box.dart';
 import 'rounded_icon_btn.dart';
 
+class CustomAppBar extends PreferredSize {
+  const CustomAppBar({
+    super.key,
+    required super.preferredSize,
+    required super.child,
+  });
+}
+
 class AppBarContent extends StatelessWidget {
   const AppBarContent({
     super.key,

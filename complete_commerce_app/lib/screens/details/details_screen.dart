@@ -21,18 +21,10 @@ class DetailsScreen extends StatelessWidget {
           preferredSize: Size.fromHeight(AppBar().preferredSize.height),
           child: AppBarContent(rating: arguments.product.rating),
         ),
-        body: const Body(),
+        body: Body(product: arguments.product),
       ),
     );
   }
-}
-
-class CustomAppBar extends PreferredSize {
-  const CustomAppBar({
-    super.key,
-    required super.preferredSize,
-    required super.child,
-  });
 }
 
 class ProductDetailsArguments {
