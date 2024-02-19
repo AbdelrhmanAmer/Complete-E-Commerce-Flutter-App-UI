@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../models/product.dart';
 import '../../../size_config.dart';
 
 
 class ProductImages extends StatefulWidget {
   const ProductImages({
     super.key,
-    required this.product,
+    required this.images,
   });
 
-  final Product product;
+  final List<String> images;
 
   @override
   State<ProductImages> createState() => _ProductImagesState();
@@ -28,12 +27,12 @@ class _ProductImagesState extends State<ProductImages> {
           width: getProportionateScreenWidth(200),
           child: AspectRatio(
               aspectRatio: 1,
-              child: Image.asset(widget.product.images[selectedIndex])),
+              child: Image.asset(widget.images[selectedIndex])),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
-            widget.product.images.length,
+            widget.images.length,
             (index) => buildSmallPreview(index),
           ),
         ),
@@ -61,7 +60,7 @@ class _ProductImagesState extends State<ProductImages> {
             color: Colors.white),
         child: AspectRatio(
           aspectRatio: 1,
-          child: Image.asset(widget.product.images[index]),
+          child: Image.asset(widget.images[index]),
         ),
       ),
     );

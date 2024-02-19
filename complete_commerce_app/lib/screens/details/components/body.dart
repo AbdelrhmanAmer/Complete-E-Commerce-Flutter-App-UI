@@ -5,7 +5,6 @@ import '../../../components/top_rounded_container.dart';
 import '../../../constants.dart';
 import '../../../models/product.dart';
 import '../../../size_config.dart';
-import 'counter.dart';
 import 'product_colors.dart';
 import 'product_images.dart';
 import 'product_description.dart';
@@ -22,7 +21,7 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          ProductImages(product: product),
+          ProductImages(images: product.images),
           SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
           TopRoundedContainer(
             color: Colors.white,
@@ -34,30 +33,16 @@ class Body extends StatelessWidget {
                   color: const Color(0xFFF5F6F9),
                   child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          right: kDefaultPadding,
-                          left: kDefaultPadding,
-                          top: kDefaultPadding/2,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ProductColors(colors: product.colors),
-                            const Counter()
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                          height:
-                              getProportionateScreenHeight(kDefaultPadding)),
+                      ProductColors(colors: product.colors),
                       TopRoundedContainer(
                         color: Colors.white,
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: kDefaultPadding,
-                            horizontal: kDefaultPadding*2,
-                          ),
+                          padding: EdgeInsets.only(
+                              right: SizeConfig.screenWidth * .15,
+                              left: SizeConfig.screenWidth * .15,
+                              bottom: getProportionateScreenHeight(40),
+                              top: getProportionateScreenHeight(
+                                  kDefaultPadding)),
                           child: DefaultButton(
                             press: () {},
                             text: "Add To Card",

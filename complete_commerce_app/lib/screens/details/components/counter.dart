@@ -16,7 +16,7 @@ class Counter extends StatelessWidget {
         RoundedIconBtn(
             iconData: Icons.remove, press: () {}, elevation: 2),
         SizedBox(
-            width: getProportionateScreenHeight(kDefaultPadding)),
+            width: getProportionateScreenHeight(kDefaultPadding*2)),
         RoundedIconBtn(iconData: Icons.add, press: () {}, elevation: 2)
       ],
     );
