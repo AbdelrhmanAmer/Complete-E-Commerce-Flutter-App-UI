@@ -4,6 +4,8 @@ import '../../../components/top_rounded_container.dart';
 import '../../../constants.dart';
 import '../../../models/product.dart';
 import '../../../size_config.dart';
+import 'counter.dart';
+import 'product_colors.dart';
 import 'product_images.dart';
 import 'product_description.dart';
 
@@ -24,7 +26,16 @@ class Body extends StatelessWidget {
           color: Colors.white,
           child: ProductDescription(product: product),
         ),
+        SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ProductColors(colors: product.colors),
+            const Counter()
+          ],
+        )
       ],
     );
   }
 }
+

@@ -23,13 +23,15 @@ class AppBarContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      padding: const EdgeInsets.only(top: kDefaultPadding/2),
+      padding: const EdgeInsets.only(top: kDefaultPadding / 2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
             padding: const EdgeInsets.only(left: kDefaultPadding),
-            child: RoundedIconBtn(iconData: Icons.arrow_back, press: () {}),
+            child: RoundedIconBtn(
+                iconData: Icons.arrow_back,
+                press: () => Navigator.pop(context)),
           ),
           Padding(
             padding: const EdgeInsets.only(right: kDefaultPadding),
