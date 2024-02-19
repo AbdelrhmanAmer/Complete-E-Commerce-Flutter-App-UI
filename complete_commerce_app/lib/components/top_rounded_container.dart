@@ -24,8 +24,8 @@ class TopRoundedContainer extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: kDefaultPadding / 2,
+        padding: const EdgeInsets.only(
+          top: kDefaultPadding / 2,
         ),
         child: child,
       ),

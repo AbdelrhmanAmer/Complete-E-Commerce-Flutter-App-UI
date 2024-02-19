@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class ProductColors extends StatefulWidget {
   const ProductColors({
@@ -18,13 +17,9 @@ class _ProductColorsState extends State<ProductColors> {
   int selectedColorIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenWidth(kDefaultPadding)),
-      child: Row(
-        children: List.generate(
-            widget.colors.length, (index) => buildColorDot(index)),
-      ),
+    return Row(
+      children: List.generate(
+          widget.colors.length, (index) => buildColorDot(index)),
     );
   }
 

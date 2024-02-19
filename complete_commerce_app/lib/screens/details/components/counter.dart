@@ -11,18 +11,14 @@ class Counter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-          right: getProportionateScreenWidth(kDefaultPadding)),
-      child: Row(
-        children: [
-          RoundedIconBtn(
-              iconData: Icons.remove, press: () {}, elevation: 2),
-          SizedBox(
-              width: getProportionateScreenHeight(kDefaultPadding)),
-          RoundedIconBtn(iconData: Icons.add, press: () {}, elevation: 2)
-        ],
-      ),
+    return Row(
+      children: [
+        RoundedIconBtn(
+            iconData: Icons.remove, press: () {}, elevation: 2),
+        SizedBox(
+            width: getProportionateScreenHeight(kDefaultPadding)),
+        RoundedIconBtn(iconData: Icons.add, press: () {}, elevation: 2)
+      ],
     );
   }
 }
