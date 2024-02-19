@@ -25,7 +25,7 @@ class _ProductImagesState extends State<ProductImages> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          width: getProportionateScreenWidth(230),
+          width: getProportionateScreenWidth(200),
           child: AspectRatio(
               aspectRatio: 1,
               child: Image.asset(widget.product.images[selectedIndex])),

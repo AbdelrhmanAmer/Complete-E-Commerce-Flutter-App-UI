@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../../../components/top_rounded_container.dart';
 import '../../../constants.dart';
 import '../../../models/product.dart';
 import '../../../size_config.dart';
 import 'product_images.dart';
-import 'title_and_description.dart';
+import 'product_description.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -19,10 +20,11 @@ class Body extends StatelessWidget {
       children: [
         ProductImages(product: product),
         SizedBox(height: getProportionateScreenHeight(kDefaultPadding)),
-        TitleAndDescription(product: product),
+        TopRoundedContainer(
+          color: Colors.white,
+          child: ProductDescription(product: product),
+        ),
       ],
     );
   }
 }
-
-

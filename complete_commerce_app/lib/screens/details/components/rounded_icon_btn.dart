@@ -14,12 +14,13 @@ class RoundedIconBtn extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.pop(context),
       child: Container(
+        width: 50,
         padding: const EdgeInsets.all(3),
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
         ),
-        child: Center(child: Icon(iconData, size: 18)),
+        child: AspectRatio(aspectRatio: 1,child: Center(child: Icon(iconData, size: 18))),
       ),
     );
   }
