@@ -39,6 +39,7 @@ AppBarTheme appBarTheme() {
   return const AppBarTheme(
     color: Colors.white,
     elevation: 0,
+    centerTitle: true,
     titleTextStyle: TextStyle(
       color: Color(0xFF8B8B8B),
       fontSize: 18,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../enums.dart';
+import '../../components/custom_bottom_nav_bar.dart';
 import 'components/body.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -10,15 +12,10 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: AppBar(
-        title: const Text("Profile"),
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {},
-        ),
-      ),
+      appBar: AppBar(title: const Text("Profile")),
       body: const Body(),
+      bottomNavigationBar:
+          const CustomBottomNavBar(selectedMenu: MenuState.profile),
     ));
   }
 }

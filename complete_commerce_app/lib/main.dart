@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/profile/profile_screen.dart';
-// import 'screens/splash/splash_screen.dart';
+import 'screens/splash/splash_screen.dart';
 import 'routes.dart';
 import 'theme.dart';
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme(),
-      initialRoute: ProfileScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }
