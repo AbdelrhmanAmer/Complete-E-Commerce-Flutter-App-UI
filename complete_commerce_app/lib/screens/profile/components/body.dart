@@ -1,60 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
 import 'profile_image.dart';
+import 'profile_menu.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ProfilePic(image: "assets/images/Profile Image.png", press: () {}),
-        const SizedBox(height: kDefaultPadding * 2),
-
-class ProfileMenu extends StatelessWidget {
-  const ProfileMenu({
-    super.key,
-    required this.title,
-    required this.preffixIcon,
-    required this.press,
-  });
-  final String title;
-  final String preffixIcon;
-  final Function() press;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-          horizontal: kDefaultPadding, vertical: kDefaultPadding / 2),
-      child: IconButton(
-        style: IconButton.styleFrom(
-            padding: const EdgeInsets.symmetric(
-                vertical: kDefaultPadding, horizontal: kDefaultPadding),
-            backgroundColor: const Color(0xFFF5F6F9),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16))),
-        onPressed: press,
-        icon: Row(
-          children: [
-            SvgPicture.asset(preffixIcon,
-                colorFilter:
-                    const ColorFilter.mode(kPrimaryColor, BlendMode.srcIn)),
-            const SizedBox(width: kDefaultPadding),
-            Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-            const Spacer(),
-            const Icon(Icons.arrow_forward_ios, size: 13),
-          ],
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          ProfilePic(image: "assets/images/Profile Image.png", press: () {}),
+          const SizedBox(height: kDefaultPadding),
+          ProfileMenu(
+            title: 'My Acouunt',
+            preffixIcon: "assets/icons/User Icon.svg",
+            press: () {},
+          ),
+          ProfileMenu(
+            title: 'Notifications',
+            preffixIcon: "assets/icons/Bell.svg",
+            press: () {},
+          ),
+          ProfileMenu(
+            title: 'Settings',
+            preffixIcon: "assets/icons/Settings.svg",
+            press: () {},
+          ),
+          ProfileMenu(
+            title: 'Help Center',
+            preffixIcon: "assets/icons/Question mark.svg",
+            press: () {},
+          ),
+          ProfileMenu(
+            title: 'Log Out',
+            preffixIcon: "assets/icons/Log out.svg",
+            press: () {},
+          ),
+        ],
       ),
-    );
-  }
-}
-
-      ],
     );
   }
 }
