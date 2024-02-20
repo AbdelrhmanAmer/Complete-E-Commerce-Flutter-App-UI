@@ -1,14 +1,19 @@
-import 'package:complete_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../size_config.dart';
 import '../../../constants.dart';
 import '../../../models/cart.dart';
 import 'cart_item_card.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   const Body({super.key});
 
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,9 +23,10 @@ class Body extends StatelessWidget {
         itemCount: demoCarts.length,
         itemBuilder: (ctx, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPadding/2),
+            padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
             child: Dismissible(
               key: Key(demoCarts[index].product.id.toString()),
+              direction: DismissDirection.endToStart,
               background: Container(
                 padding: const EdgeInsets.only(right: kDefaultPadding),
                 decoration: BoxDecoration(
@@ -33,6 +39,9 @@ class Body extends StatelessWidget {
                   ],
                 ),
               ),
+              onDismissed: (value) {
+                setState(() => demoCarts.removeAt(index));
+              },
               child: CartItemCard(cart: demoCarts[index]),
             ),
           );
