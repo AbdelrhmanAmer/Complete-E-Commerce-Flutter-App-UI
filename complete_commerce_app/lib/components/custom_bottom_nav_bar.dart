@@ -47,8 +47,11 @@ class CustomBottomNavBar extends StatelessWidget {
                   BlendMode.srcIn,
                 ),
               ),
-              onPressed: () =>
-                  Navigator.pushNamed(context, HomeScreen.routeName),
+              onPressed: () {
+                if(selectedMenu != MenuState.home){
+                  Navigator.pushNamed(context, HomeScreen.routeName);
+                }
+              }
             ),
             IconButton(
               icon: SvgPicture.asset(
@@ -81,8 +84,12 @@ class CustomBottomNavBar extends StatelessWidget {
                         : inActiveIconColor,
                     BlendMode.srcIn),
               ),
-              onPressed: () =>
-                  Navigator.pushNamed(context, ProfileScreen.routeName),
+              onPressed: () {
+                if(selectedMenu != MenuState.profile){
+                  Navigator.pushNamed(context, ProfileScreen.routeName);
+                }
+
+              }
             ),
           ],
         ),
