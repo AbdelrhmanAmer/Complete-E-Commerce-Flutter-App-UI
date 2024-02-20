@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
 import '../../models/cart.dart';
+import 'components/body.dart';
+import 'components/check_cart.dart';
 
 class CartScreen extends StatelessWidget {
   static String routeName = "/cart";
@@ -13,6 +14,7 @@ class CartScreen extends StatelessWidget {
         child: Scaffold(
       appBar: buildAppBar(context),
       body: const Body(),
+      bottomNavigationBar: const CheckCart(),
     ));
   }
 
