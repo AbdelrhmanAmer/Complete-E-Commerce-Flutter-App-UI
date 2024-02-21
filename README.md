@@ -1,3 +1,3 @@
 # Complete-E-Commerce-Flutter-App-UI
 
-[![Video Preview](complete_commerce_app/preview/demo.mp4)](preview/example.mp4)
+<img src="complete_commerce_app/preview/compressed_demo.gif" alt="GIF Description" width="5500" height="700">
