@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          ProfilePic(image: "assets/images/Profile Image.png", press: () {}),
+          ProfilePic(image: "assets/images/me1.png", press: () {}),
           const SizedBox(height: kDefaultPadding),
           ProfileMenu(
             title: 'My Acouunt',
