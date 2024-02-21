@@ -20,7 +20,7 @@ class AddVoucherBtn extends StatelessWidget {
           height: getProportionateScreenHeight(40),
           padding: const EdgeInsets.all(7),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Color(0xFFF5F6F9)),
+              borderRadius: BorderRadius.circular(10), color: const Color(0xFFF5F6F9)),
           child: SvgPicture.asset(
             "assets/icons/receipt.svg",
             colorFilter:
